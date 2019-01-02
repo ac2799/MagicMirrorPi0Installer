@@ -12,7 +12,11 @@ Set up your Internet connection. You may also want to set up SSH and VNC at this
 
 ### Magic Mirror Installation
 
-Clone this project into your home directory. It should come down into the folder ~/MagicMirrorPi0Installer
+Clone this project into your home directory (It should come down into the folder ~/MagicMirrorPi0Installer)
+
+```
+git clone https://github.com/ac2799/MagicMirrorPi0Installer
+```
 
 Run the command
 

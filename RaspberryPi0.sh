@@ -33,12 +33,12 @@ sudo mkdir $THEME_DIR/MagicMirror
 sudo cp ~/MagicMirror/splashscreen/splash.png $THEME_DIR/MagicMirror/splash.png && sudo cp ~/MagicMirror/splashscreen/MagicMirror.plymouth $THEME_DIR/MagicMirror/MagicMirror.plymouth && sudo cp ~/MagicMirror/splashscreen/MagicMirror.script $THEME_DIR/MagicMirror/MagicMirror.script;
 sudo plymouth-set-default-theme -R MagicMirror;
 mkdir ~/MagicMirror/PiZero;
-sudo mv ~/MagicMirrorPi0Installer/startMagicMirror.sh ~/MagicMirror/PiZero/startMagicMirror.sh;
-sudo mv ~/MagicMirrorPi0Installer/pm2_MagicMirror.json ~/MagicMirror/PiZero/pm2_MagicMirror.json;
-sudo mv ~/MagicMirrorPi0Installer/chromium_start.sh ~/MagicMirror/PiZero/chromium_start.sh;
-sudo chmod a+x ~/MagicMirror/PiZero/startMagicMirror.sh;
-sudo chmod a+x ~/MagicMirror/PiZero/pm2_MagicMirror.json;
-sudo chmod a+x ~/MagicMirror/PiZero/chromium_start.sh;
+sudo mv ~/MagicMirrorPi0Installer/startMagicMirrorPi0.sh ~/MagicMirror/PiZero/startMagicMirrorPi0.sh;
+sudo mv ~/MagicMirrorPi0Installer/pm2_MagicMirrorPi0.json ~/MagicMirror/PiZero/pm2_MagicMirrorPi0.json;
+sudo mv ~/MagicMirrorPi0Installer/chromium_startPi0.sh ~/MagicMirror/PiZero/chromium_startPi0.sh;
+sudo chmod a+x ~/MagicMirror/PiZero/startMagicMirrorPi0.sh;
+sudo chmod a+x ~/MagicMirror/PiZero/pm2_MagicMirrorPi0.json;
+sudo chmod a+x ~/MagicMirror/PiZero/chromium_startPi0.sh;
 
 # Use pm2 control like a service MagicMirror
 sudo npm install -g pm2;

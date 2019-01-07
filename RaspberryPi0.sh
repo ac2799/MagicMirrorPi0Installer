@@ -42,7 +42,7 @@ sudo chmod a+x ~/MagicMirror/PiZero/chromium_startPi0.sh;
 
 # Use pm2 control like a service MagicMirror
 sudo npm install -g pm2;
-sudo su -c "env PATH=$PATH:/usr/bin pm2 startup systemd -u pi --hp /home/pi";
-pm2 start /MagicMirror/PiZero/pm2_MagicMirrorPi0.json;
+sudo su -c "env PATH=$PATH:/usr/bin pm2 startup systemd -u pi --hp $HOME";
+pm2 start ~/MagicMirror/PiZero/pm2_MagicMirrorPi0.json;
 pm2 save;
 echo 'Magic Mirror should begin shortly'

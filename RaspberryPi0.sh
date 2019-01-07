@@ -30,8 +30,8 @@ cp config/config.js.sample config/config.js;
 #Set the splash screen to be magic mirror
 THEME_DIR="/usr/share/plymouth/themes"
 sudo mkdir $THEME_DIR/MagicMirror
-sudo cp ~/MagicMirror/splashscreen/splash.png $THEME_DIR/MagicMirror/splash.png && sudo cp ~/MagicMirror/splashscreen/MagicMirror.plymouth $THEME_DIR/MagicMirror/MagicMirror.plymouth && sudo cp ~/MagicMirror/splashscreen/MagicMirror.script $THEME_DIR/MagicMirror/MagicMirror.script; 
-sudo plymouth-set-default-theme -R MagicMirror; 
+sudo cp ~/MagicMirror/splashscreen/splash.png $THEME_DIR/MagicMirror/splash.png && sudo cp ~/MagicMirror/splashscreen/MagicMirror.plymouth $THEME_DIR/MagicMirror/MagicMirror.plymouth && sudo cp ~/MagicMirror/splashscreen/MagicMirror.script $THEME_DIR/MagicMirror/MagicMirror.script;
+sudo plymouth-set-default-theme -R MagicMirror;
 mkdir ~/MagicMirror/PiZero;
 sudo mv ~/MagicMirrorPi0Installer/startMagicMirror.sh ~/MagicMirror/PiZero/startMagicMirror.sh;
 sudo mv ~/MagicMirrorPi0Installer/pm2_MagicMirror.json ~/MagicMirror/PiZero/pm2_MagicMirror.json;
@@ -42,7 +42,8 @@ sudo chmod a+x ~/MagicMirror/PiZero/chromium_start.sh;
 
 # Use pm2 control like a service MagicMirror
 sudo npm install -g pm2;
-sudo su -c "env PATH=$PATH:/usr/bin pm2 startup systemd -u pi --hp /home/pi";
+raspberryuser=$USER
+sudo su -c "env PATH=$PATH:/usr/bin pm2 startup systemd -u $raspberryuser --hp /home/$raspberryuser";
 pm2 start /MagicMirror/PiZero/pm2_MagicMirror.json;
 pm2 save;
 echo 'Magic Mirror should begin shortly'

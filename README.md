@@ -21,7 +21,7 @@ git clone https://github.com/ac2799/MagicMirrorPi0Installer
 Run the command
 
 ```
-sudo chmod a+x ~/MagicMirrorPi0Installer/RaspberryPi0.sh && sh ~/MagicMirrorPi0Installer/RaspberryPi0.sh
+sudo chmod a+x MagicMirrorPi0Installer/RaspberryPi0.sh && sh MagicMirrorPi0Installer/RaspberryPi0.sh
 ```
 
 This will make the shell script executable, and if that is successful, it will also run the script.
